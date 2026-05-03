@@ -1,7 +1,18 @@
 {
   "version": 4,
-  "lastUpdated": "2026-04-19",
+  "lastUpdated": "2026-05-03",
   "apps": [
+    {
+      "id": "ascend-dex",
+      "name": "Ascend DEX",
+      "description": "Privacy-first decentralized exchange on Midnight",
+      "icon": "https://raw.githubusercontent.com/webisoftSoftware/1AM-app-registery/main/icons/ascend.svg",
+      "url": "https://dex.ascend.market",
+      "category": "defi",
+      "networks": ["preview"],
+      "featured": true,
+      "new": true
+    },
     {
       "id": "pulse",
       "name": "Pulse",
