@@ -9,7 +9,7 @@
       "icon": "https://raw.githubusercontent.com/webisoftSoftware/1AM-app-registery/main/icons/ascend.svg",
       "url": "https://dex.ascend.market",
       "category": "defi",
-      "networks": ["preview"],
+      "networks": ["mainnet"],
       "featured": true,
       "new": true
     },
