@@ -62,7 +62,7 @@ We'll review and merge within 24 hours.
 | `description` | string | Yes | One-line description. Max 120 chars. |
 | `icon` | string (URL) | Yes | App icon URL. Must be HTTPS. PNG or SVG, 128x128px recommended. |
 | `url` | string (URL) | Yes | DApp URL. Must be HTTPS. |
-| `category` | string | Yes | One of: `defi`, `tools`, `gaming`, `social`, `nft`, `other` |
+| `category` | string | Yes | One of: `defi`, `tools`, `gaming`, `social`, `nft`, `identity`, `other` |
 | `networks` | string[] | Yes | Supported networks: `preview`, `preprod`, `mainnet`, or `*` for all. |
 | `featured` | boolean | No | Set by maintainers only. Do not include in submissions. |
 | `new` | boolean | No | Automatically set for new listings. Removed after 30 days. |
@@ -91,8 +91,9 @@ We'll review and merge within 24 hours.
 | `defi` | Decentralized finance — trading, lending, liquidity | Token launchpads, DEXs, bridges |
 | `tools` | Developer and user tools | Block explorers, analytics, faucets |
 | `gaming` | On-chain gaming | Card games, strategy, prediction markets |
-| `social` | Social applications | Identity, messaging, reputation |
+| `social` | Social applications | Messaging, reputation, communities |
 | `nft` | NFT platforms | Marketplaces, minting, collections |
+| `identity` | Identity and naming | Name services, ZK identity, verifiable credentials |
 | `other` | Everything else | DAOs, governance, utilities |
 
 ---

@@ -8,7 +8,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const VALID_CATEGORIES = ['defi', 'tools', 'gaming', 'social', 'nft', 'other'];
+const VALID_CATEGORIES = ['defi', 'tools', 'gaming', 'social', 'nft', 'identity', 'other'];
 const VALID_NETWORKS = ['preview', 'preprod', 'mainnet', '*'];
 const MAX_ID_LENGTH = 32;
 const MAX_NAME_LENGTH = 40;

@@ -34,7 +34,7 @@ Before submitting, make sure:
 - [ ] `description` is 120 characters or less
 - [ ] `icon` is HTTPS, 128x128px PNG or SVG, under 50KB
 - [ ] `url` is HTTPS and publicly accessible
-- [ ] `category` is one of: `defi`, `tools`, `gaming`, `social`, `nft`, `other`
+- [ ] `category` is one of: `defi`, `tools`, `gaming`, `social`, `nft`, `identity`, `other`
 - [ ] `networks` lists at least one supported network
 - [ ] Your app implements the Midnight DApp Connector API (v4.0+)
 - [ ] Your app works with the 1AM Wallet
