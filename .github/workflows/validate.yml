@@ -3,10 +3,10 @@ name: Validate Registry
 on:
   pull_request:
     branches: [main]
-    paths: ['registry.json', 'icons/**']
+    paths: ['registry.json', 'icons/**', 'validate.js', '.github/workflows/validate.yml']
   push:
     branches: [main]
-    paths: ['registry.json', 'icons/**']
+    paths: ['registry.json', 'icons/**', 'validate.js', '.github/workflows/validate.yml']
 
 jobs:
   validate:
