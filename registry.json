@@ -1,6 +1,6 @@
 {
   "version": 4,
-  "lastUpdated": "2026-05-03",
+  "lastUpdated": "2026-05-24",
   "apps": [
     {
       "id": "ascend-dex",
@@ -9,7 +9,7 @@
       "icon": "https://raw.githubusercontent.com/webisoftSoftware/1AM-app-registery/main/icons/ascend.svg",
       "url": "https://dex.ascend.market",
       "category": "defi",
-      "networks": ["mainnet"],
+      "networks": ["preview", "preprod", "mainnet"],
       "featured": true,
       "new": true
     },
@@ -96,6 +96,27 @@
       "category": "identity",
       "networks": ["preview", "preprod", "mainnet"],
       "featured": true,
+      "new": true
+    },
+    {
+      "id": "nyx-dex",
+      "name": "NyxDex",
+      "description": "Privacy DeFi on Midnight",
+      "icon": "https://raw.githubusercontent.com/webisoftSoftware/1AM-app-registery/main/icons/nyxdex.png",
+      "url": "https://nyxdex.io",
+      "category": "defi",
+      "networks": ["preview"],
+      "featured": true,
+      "new": true
+    },
+    {
+      "id": "night-heron",
+      "name": "Night Heron",
+      "description": "Blockchain-native Florida community association management (Ch. 718/719/720)",
+      "icon": "https://raw.githubusercontent.com/webisoftSoftware/1AM-app-registery/main/icons/night-heron.png",
+      "url": "https://nightheron.io",
+      "category": "other",
+      "networks": ["preprod"],
       "new": true
     }
   ]
