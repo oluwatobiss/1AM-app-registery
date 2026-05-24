@@ -29,7 +29,7 @@
       "name": "Midnight City",
       "description": "On-chain AI simulation on Midnight Network",
       "icon": "https://raw.githubusercontent.com/webisoftSoftware/1AM-app-registery/main/icons/midnight-city.png",
-      "url": "https://play.midnight.city/dashboard/game",
+      "url": "https://www.midnight.city/spaces/central",
       "category": "gaming",
       "networks": ["mainnet"],
       "immersive": true,
