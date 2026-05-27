@@ -118,6 +118,16 @@
       "category": "other",
       "networks": ["preprod"],
       "new": true
+    },
+    {
+      "id": "pilotlog",
+      "name": "PilotLog",
+      "description": "A verifiable aviation logbook for pilots and aircraft history on Midnight.",
+      "icon": "https://pilotlog-production.up.railway.app/icon.png",
+      "url": "https://pilotlog-production.up.railway.app",
+      "category": "identity",
+      "networks": ["preprod"],
+      "new": true      
     }
   ]
 }
