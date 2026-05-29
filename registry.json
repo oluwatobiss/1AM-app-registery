@@ -1,6 +1,6 @@
 {
-  "version": 4,
-  "lastUpdated": "2026-05-24",
+  "version": 5,
+  "lastUpdated": "2026-05-29",
   "apps": [
     {
       "id": "ascend-dex",
@@ -11,7 +11,29 @@
       "category": "defi",
       "networks": ["preview", "preprod", "mainnet"],
       "featured": true,
-      "new": true
+      "new": true,
+      "contracts": [
+        {
+          "address": "8382dda611573d1ce9c8d969e50a7c5d001de9e31b1a8f5721ee4964bcce9921",
+          "network": "mainnet",
+          "name": "Ascend Registry",
+          "role": "Registry",
+          "description": "Verified Ascend Markets registry contract on Midnight mainnet.",
+          "theme": "ascend",
+          "verified": true,
+          "explorerUrl": "https://explorer.1am.xyz/contract/8382dda611573d1ce9c8d969e50a7c5d001de9e31b1a8f5721ee4964bcce9921"
+        },
+        {
+          "address": "3b0c1d145794e7c64fbc7d5c24c9c28274e7004bb25853087f790f6c104888fb",
+          "network": "mainnet",
+          "name": "Ascend Markets Contract",
+          "role": "Application",
+          "description": "Verified Ascend Markets application contract on Midnight mainnet.",
+          "theme": "ascend",
+          "verified": true,
+          "explorerUrl": "https://explorer.1am.xyz/contract/3b0c1d145794e7c64fbc7d5c24c9c28274e7004bb25853087f790f6c104888fb"
+        }
+      ]
     },
     {
       "id": "pulse",

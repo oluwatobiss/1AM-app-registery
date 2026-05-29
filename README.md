@@ -42,6 +42,18 @@ Add an entry to the `apps` array:
   "url": "https://your-app.com",
   "category": "defi",
   "networks": ["preview", "preprod"],
+  "contracts": [
+    {
+      "address": "64-character-contract-address-hex",
+      "network": "mainnet",
+      "name": "Your App Contract",
+      "role": "Application",
+      "description": "Verified mainnet contract for Your App",
+      "theme": "ascend",
+      "verified": true,
+      "explorerUrl": "https://explorer.1am.xyz/contract/..."
+    }
+  ],
   "featured": false,
   "new": true
 }
@@ -64,8 +76,22 @@ We'll review and merge within 24 hours.
 | `url` | string (URL) | Yes | DApp URL. Must be HTTPS. |
 | `category` | string | Yes | One of: `defi`, `tools`, `gaming`, `social`, `nft`, `identity`, `other` |
 | `networks` | string[] | Yes | Supported networks: `preview`, `preprod`, `mainnet`, or `*` for all. |
+| `contracts` | object[] | No | Verified public contracts for this app. Used by 1AM Explorer to show partner themes and verified badges. |
 | `featured` | boolean | No | Set by maintainers only. Do not include in submissions. |
 | `new` | boolean | No | Automatically set for new listings. Removed after 30 days. |
+
+### Contract Specification
+
+| Field | Type | Required | Description |
+|---|---|---|---|
+| `address` | string | Yes | 64-character Midnight contract address hex. |
+| `network` | string | Yes | Contract network: `preview`, `preprod`, or `mainnet`. Must also be listed in the app `networks`. |
+| `name` | string | Yes | Human-readable contract name. Max 40 chars. |
+| `role` | string | Yes | Short role label, such as `Registry`, `Application`, or `Router`. |
+| `description` | string | Yes | One-line contract description. Max 120 chars. |
+| `theme` | string | No | Partner explorer theme to activate for this contract. Currently supports `ascend`. |
+| `verified` | boolean | No | Marks the contract as verified by the 1AM registry. |
+| `explorerUrl` | string | No | HTTPS link to the 1AM Explorer contract detail page. |
 
 ### Icon Requirements
 

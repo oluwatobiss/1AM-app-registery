@@ -10,9 +10,11 @@ const path = require('path');
 
 const VALID_CATEGORIES = ['defi', 'tools', 'gaming', 'social', 'nft', 'identity', 'other'];
 const VALID_NETWORKS = ['preview', 'preprod', 'mainnet', '*'];
+const VALID_CONTRACT_THEMES = ['ascend'];
 const MAX_ID_LENGTH = 32;
 const MAX_NAME_LENGTH = 40;
 const MAX_DESCRIPTION_LENGTH = 120;
+const MAX_CONTRACT_ROLE_LENGTH = 32;
 const MAX_ICON_FILE_SIZE = 50 * 1024; // 50KB
 const MAX_APPS = 500;
 
@@ -90,6 +92,68 @@ for (const app of registry.apps) {
       if (!VALID_NETWORKS.includes(n)) fail(`Invalid network "${n}" — must be one of: ${VALID_NETWORKS.join(', ')}`);
     }
     pass(`networks: ${app.networks.join(', ')}`);
+  }
+
+  // contracts
+  if (app.contracts !== undefined) {
+    if (!Array.isArray(app.contracts)) {
+      fail('"contracts" must be an array when present');
+    } else {
+      const contractAddresses = new Set();
+      for (const contract of app.contracts) {
+        if (!contract || typeof contract !== 'object') {
+          fail('contract entries must be objects');
+          continue;
+        }
+
+        if (!contract.address || typeof contract.address !== 'string') {
+          fail('contract missing "address"');
+        } else if (!/^[a-f0-9]{64}$/i.test(contract.address)) {
+          fail(`contract address must be 64 hex chars: ${contract.address}`);
+        } else if (contractAddresses.has(contract.address.toLowerCase())) {
+          fail(`duplicate contract address in app: ${contract.address}`);
+        } else {
+          contractAddresses.add(contract.address.toLowerCase());
+          pass(`contract address: ${contract.address.slice(0, 12)}...`);
+        }
+
+        if (!VALID_NETWORKS.includes(contract.network) || contract.network === '*') {
+          fail(`Invalid contract network "${contract.network}" — must be one of: preview, preprod, mainnet`);
+        } else if (!Array.isArray(app.networks) || (!app.networks.includes('*') && !app.networks.includes(contract.network))) {
+          fail(`contract network "${contract.network}" is not listed in app.networks`);
+        } else {
+          pass(`contract network: ${contract.network}`);
+        }
+
+        if (!contract.name || typeof contract.name !== 'string') fail('contract missing "name"');
+        else if (contract.name.length > MAX_NAME_LENGTH) fail(`contract name too long (${contract.name.length}/${MAX_NAME_LENGTH})`);
+        else pass(`contract name: ${contract.name}`);
+
+        if (!contract.role || typeof contract.role !== 'string') fail('contract missing "role"');
+        else if (contract.role.length > MAX_CONTRACT_ROLE_LENGTH) fail(`contract role too long (${contract.role.length}/${MAX_CONTRACT_ROLE_LENGTH})`);
+        else pass(`contract role: ${contract.role}`);
+
+        if (!contract.description || typeof contract.description !== 'string') fail('contract missing "description"');
+        else if (contract.description.length > MAX_DESCRIPTION_LENGTH) fail(`contract description too long (${contract.description.length}/${MAX_DESCRIPTION_LENGTH})`);
+        else pass(`contract description: ${contract.description.slice(0, 50)}...`);
+
+        if (contract.theme !== undefined && !VALID_CONTRACT_THEMES.includes(contract.theme)) {
+          fail(`Invalid contract theme "${contract.theme}" — must be one of: ${VALID_CONTRACT_THEMES.join(', ')}`);
+        }
+
+        if (contract.verified !== undefined && typeof contract.verified !== 'boolean') {
+          fail('contract "verified" must be boolean when present');
+        }
+
+        if (contract.explorerUrl !== undefined) {
+          if (typeof contract.explorerUrl !== 'string' || !contract.explorerUrl.startsWith('https://')) {
+            fail(`contract explorerUrl must be HTTPS: ${contract.explorerUrl}`);
+          } else {
+            pass(`contract explorerUrl: ${contract.explorerUrl}`);
+          }
+        }
+      }
+    }
   }
 }
 
