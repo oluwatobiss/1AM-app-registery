@@ -140,6 +140,16 @@
       "category": "other",
       "networks": ["preprod"],
       "new": true
+    },
+    {
+      "id": "proof-of-age-gate",
+      "name": "Proof-of-Age Gate",
+      "description": "Prove you meet a minimum age without revealing your birth year - ZK selective disclosure on Midnight.",
+      "icon": "https://tomiin.github.io/midnight-proof-of-age/icon.svg",
+      "url": "https://tomiin.github.io/midnight-proof-of-age/",
+      "category": "identity",
+      "networks": ["preview"],
+      "new": true
     }
   ]
 }
