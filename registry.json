@@ -180,6 +180,27 @@
       "category": "identity",
       "networks": ["preview"],
       "new": true
+    },
+    {
+      "id": "midnight-private-auction",
+      "name": "Midnight Private Auction",
+      "description": "ZK sealed-bid auction on Midnight Mainnet. Bids are AES-256-GCM encrypted in private state — verified with 1AM Wallet.",
+      "icon": "https://raw.githubusercontent.com/webisoftSoftware/1AM-app-registery/main/icons/midnight-private-auction.png",
+      "url": "https://midnight-private-auction.vercel.app",
+      "category": "other",
+      "networks": ["mainnet"],
+      "new": true,
+      "contracts": [
+        {
+          "address": "4fd31443997bd04bbf0b94e2ef3d5b0ff05479c4fb80bcac0dc74b2c763282e5",
+          "network": "mainnet",
+          "name": "Midnight Private Auction",
+          "role": "Application",
+          "description": "ZK sealed-bid auction contract with AES-256-GCM encrypted private state on Midnight mainnet.",
+          "verified": true,
+          "explorerUrl": "https://explorer.1am.xyz/contract/4fd31443997bd04bbf0b94e2ef3d5b0ff05479c4fb80bcac0dc74b2c763282e5"
+        }
+      ]
     }
   ]
 }
