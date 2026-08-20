@@ -211,6 +211,16 @@
       "category": "defi",
       "networks": ["mainnet"],
       "new": true
+    },
+    {
+      "id": "vialabs-bridge",
+      "name": "ViaLabs Bridge",
+      "description": "First USDM bridge on Midnight — move USDM between Midnight and other chains",
+      "icon": "https://raw.githubusercontent.com/webisoftSoftware/1AM-app-registery/main/icons/vialabs-bridge.svg",
+      "url": "https://midnight.anytoany.xyz",
+      "category": "defi",
+      "networks": ["preview", "mainnet"],
+      "new": true
     }
   ]
 }
