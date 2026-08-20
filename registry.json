@@ -201,6 +201,16 @@
           "explorerUrl": "https://explorer.1am.xyz/contract/4fd31443997bd04bbf0b94e2ef3d5b0ff05479c4fb80bcac0dc74b2c763282e5"
         }
       ]
+    },
+    {
+      "id": "minswap",
+      "name": "Minswap",
+      "description": "Multi-pool Cardano DEX with NIGHT markets, deep liquidity and low-fee swaps",
+      "icon": "https://raw.githubusercontent.com/webisoftSoftware/1AM-app-registery/main/icons/minswap.png",
+      "url": "https://minswap.org",
+      "category": "defi",
+      "networks": ["mainnet"],
+      "new": true
     }
   ]
 }
