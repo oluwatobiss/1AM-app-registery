@@ -205,7 +205,7 @@
     {
       "id": "minswap",
       "name": "Minswap",
-      "description": "Multi-pool Cardano DEX with NIGHT markets, deep liquidity and low-fee swaps",
+      "description": "Cardano DEX with NIGHT markets. To connect, choose Custom wallet in Minswap, then select \"1am\"",
       "icon": "https://raw.githubusercontent.com/webisoftSoftware/1AM-app-registery/main/icons/minswap.png",
       "url": "https://minswap.org",
       "category": "defi",
